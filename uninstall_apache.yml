@@ -1,0 +1,11 @@
+---
+ - name: uninstall apache
+   hosts: Dabain
+   gather_facts: false
+   become: true
+   tasks:
+    - name: remove apache
+      yum:
+       name: apache2
+       state: absent
+          

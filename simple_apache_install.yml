@@ -1,0 +1,9 @@
+---
+ - name: install apache
+   hosts: webservers
+   gather_facts: false
+   become: true
+   tasks: 
+    - include_tasks: install_apache_on_centos.yml 
+    - include_tasks: restartedservice.yml   
+...
