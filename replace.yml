@@ -1,0 +1,11 @@
+---
+ - name: Install SSL on remote server.
+   hosts: webservers
+   gather_facts: false
+   become: yes
+   tasks: 
+    - name: Create the SSL certificates on destination server.
+      template:
+       src: /home/ansadmin/ssl.crt 
+       dest: /home/ansadmin/domain.crts
+...
